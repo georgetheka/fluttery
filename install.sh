@@ -10,7 +10,10 @@ else
   # remove previous repo
   rm -rf ./flutter
   # only download the latest stable version
-  git clone https://github.com/flutter/flutter.git -b stable --depth 1
+  # git clone https://github.com/flutter/flutter.git -b stable --depth 1
+  # get all branches
+  git clone https://github.com/flutter/flutter.git
+
   # append flutter bin to env path
   echo "# adding flutter support at `date`" >> ~/"$shell_file"
   echo "export PATH=\"\$PATH:`pwd`/flutter/bin\"" >> ~/"$shell_file"
@@ -18,7 +21,7 @@ else
 fi
 
 echo "precaching essential libraries"
-# the followig will trigger binary download and install
+# the following will trigger a binary download and install
 flutter precache 
 
 # show any missing dependencies

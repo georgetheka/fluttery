@@ -10,9 +10,14 @@ To install flutter from github and related tools:
 make install
 ```
 
+To enable web as a target:
+
+```
+make web
+```
+
 To run the ios simulator:
 
 ```
 make sios
 ```
-
